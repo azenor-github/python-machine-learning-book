@@ -1,0 +1,9 @@
+python-machine-learning-book-master
+datasets
+venv
+__pycache__
+.ipynb_checkpoints
+*.pyc
+*.sublime-workspace
+temp
+*.sublime-project
