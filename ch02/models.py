@@ -14,7 +14,7 @@ class WeightsMixin(object):
     def weights(self):
         return getattr(self, "w_", None)
 
-
+        
 class Perceptron(WeightsMixin):
 
     def __init__(self, eta=0.01, n_iter=50, random_state=1):
@@ -123,7 +123,7 @@ class AdalineSGD(WeightsMixin):
         self.w_initialized = True
 
     def _update_weights(self, xi, target):
-        output = self.cactivation(self.net_input(xi))
+        output = self.activation(self.net_input(xi))
         error = (target - output)
         self.w_[1:] += self.eta * xi.dot(error)
         self.w_[0] += self.eta * error
@@ -225,4 +225,4 @@ class MultiClassClassifier:
         yhat = np.vstack(zs).T
         max_yhats = np.argmax(yhat, axis=1)
 
-        return [ self.clfs_[index]["cls"] for index in max_yhats ]
+        return np.array([ self.clfs_[index]["cls"] for index in max_yhats ])
