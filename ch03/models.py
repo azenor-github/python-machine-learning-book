@@ -15,9 +15,10 @@ class WeightsMixin(object):
 
 class LogisticRegresionGD(WeightsMixin):
 
-    def __init__(self, eta=0.1, n_iter=10, random_state=None):
+    def __init__(self, eta=0.1, n_iter=10, lambda_=0.0, random_state=None):
         self.eta = eta
         self.n_iter = n_iter
+        self.lambda_ = lambda_
         self.random_state = random_state
 
     def fit(self, X, y):
@@ -30,13 +31,15 @@ class LogisticRegresionGD(WeightsMixin):
 
     def update_weights(self, X, y):
         yhat = self.activation(self.net_input(X))
-        errors = y - yhat
-        self.w_[1:] += self.eta * X.T.dot(errors)
-        self.w_[0] += self.eta * errors.sum()
+        self.w_ -= self.eta * self.calc_gradient(X, y, yhat)
         return self.calc_cost(y, yhat)
 
+    def calc_gradient(self, X, y, output):
+        errors = y - output
+        return np.hstack((-errors.sum(), -X.T.dot(errors) + self.lambda_*self.w_[1:]))
+
     def calc_cost(self, y, output):
-        return -y.dot(np.log(output)) - (1-y).dot(np.log(1-output))
+        return -y.dot(np.log(output)) - (1-y).dot(np.log(1-output)) + self.lambda_*self.w_[1:].T.dot(self.w_[1:])
 
     def activation(self, z):
         return 1. / (1. + np.exp(-np.clip(z, -250, 250)))
