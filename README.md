@@ -6,7 +6,7 @@ Official repository: https://github.com/rasbt/python-machine-learning-book-2nd-e
 
 1. - [x] Machine Learning - Giving Computers the Ability to Learn from Data
 2. - [x] Training Machine Learning Algorithms for Classification
-3. - [ ] A Tour of Machine Learning Classifiers Using Scikit-Learn
+3. - [x] A Tour of Machine Learning Classifiers Using Scikit-Learn
 4. - [ ] Building Good Training Sets – Data Pre-Processing
 5. - [ ] Compressing Data via Dimensionality Reduction
 6. - [ ] Learning Best Practices for Model Evaluation and Hyperparameter Optimization
@@ -33,3 +33,21 @@ Official repository: https://github.com/rasbt/python-machine-learning-book-2nd-e
 5. What are the differences between batch gradient descent and stochastic gradient descent?
 6. Implement multi-class classifier that will enable to combine different kind of classifiers.
 7. Implement mini-batch gradient descent.
+
+#### Chapter 03
+
+1. Describe logistic regression model.
+2. Formulate gradient descent for logistic regression. Start from likelihood function.
+3. Prctise sckit-learn for preprocessing dataset (splitting dataset, features scaling) on wine dataset.
+4. Extend implementation of logistic regression model with by L2 regularization.
+5. What is a SVM? What are the main advantages and drawbacks  of using SVM over logistic regression?
+6. Read "Support Vector Machine" by Alexandre Kowalczyk (Sucinctly series).
+7. Describe decision tree algorithm. What are the most typical impurity measures?
+8. Implement decision tree classifier.
+9. Read about bayesian learning from 'Machine Learning' by Tom Mitchel.
+10. Describe Random Forest algorithm. What are the main metaparameters and how how they impact the overfitting or underfitting?
+11. Describe KNN method. Why is it call 'lazy learner'?
+12. Implment KNN.
+ 
+6. 
+
