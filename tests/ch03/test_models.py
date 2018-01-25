@@ -123,3 +123,112 @@ class LogisticRegresionTest(unittest.TestCase):
 
         self.assertEqual(cost, -2*np.log(0.75) + 4)
 
+
+class DecisionTreeClassifierTest(unittest.TestCase):
+
+    def test_fit_model_to_data_and_make_prediction(self):
+        dtc = DecisionTreeClassifier()
+
+        X = np.array([[-1], [0], [3], [2], [7], [10], [130], [7]])
+        y = np.array([0, 0, 0, 0, 1, 1, 1, 1])
+
+        dtc.fit(X, y)
+        yhat = dtc.predict(np.array([[0], [8]]))
+
+        self.assertTrue(np.array_equal(yhat, np.array([0, 1])))
+
+    def test_determine_feature_split_in_accordance_with_criterion(self):
+        dtc = DecisionTreeClassifier()
+
+        X = np.array([[-1], [0], [3], [2], [7], [10], [130], [7]])
+        y = np.array([0, 0, 0, 0, 1, 1, 1, 1])
+
+        _, value = dtc.determine_feature_split(X[:,0], y)
+
+        self.assertEqual(value, 5)
+
+    def test_identify_potential_splits(self):
+        dtc = DecisionTreeClassifier()
+
+        X = np.array([[-1], [0], [3], [2], [7], [10], [130], [7]])
+
+        splits = dtc.identify_potential_splits(X[:,0])
+
+        # 1. Select unique values and sort: -1, 0, 2, 3, 7, 10, 130
+        # 2. Use middle values as splits: -0.5, 1, 2.5, 5, 8.5, 70
+        self.assertTrue(np.array_equal(splits, np.array([-0.5, 1, 2.5, 5, 8.5, 70])))
+
+    def test_choose_the_best_split(self):
+        dtc = DecisionTreeClassifier()
+
+        X = np.array([[-1], [0], [3], [2], [7], [10], [130], [7]])
+        y = np.array([0, 0, 0, 0, 1, 1, 1, 1])
+
+        splits = np.array([-0.5, 1, 2.5, 5, 8.5, 70])
+
+        impurity_decrease, value = dtc.choose_the_best_split(X[:,0], y, splits)
+
+        self.assertEqual(value, 5)
+
+    def test_get_criterion_function_returns_correct_function(self):
+        dtc = DecisionTreeClassifier(criterion="entropy")
+
+        crit_func = dtc.get_criterion_function()
+
+        self.assertEqual(crit_func, dtc.calc_entropy)
+
+    def test_calc_entropy(self):
+        dtc = DecisionTreeClassifier()
+
+        X = np.array([[-1], [0], [3], [2], [7], [10], [130], [7]])
+        y = np.array([0, 0, 1, 0, 1, 0, 1, 0])
+
+        entropy = dtc.calc_entropy(X[:,0], y)
+
+        self.assertAlmostEqual(entropy, 0.954434002924965)
+
+    def test_calc_gini(self):
+        dtc = DecisionTreeClassifier()
+
+        X = np.array([[-1], [0], [3], [2], [7], [10], [130], [7]])
+        y = np.array([0, 0, 1, 0, 1, 0, 1, 0])
+
+        gini = dtc.calc_gini(X[:,0], y)
+
+        self.assertAlmostEqual(gini, 0.46875)
+
+    def test_calc_split_info(self):
+        dtc = DecisionTreeClassifier()
+
+        x = np.array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
+        split_info = dtc.calc_split_info(x, 4.5)
+
+        self.assertEqual(split_info, 1)
+
+    def test_determine_sample_slit(self):
+        dtc = DecisionTreeClassifier()
+
+        X = np.array([
+            [-1, 1], [0, 0], [3, 1], [2, 0], [7, 1], [10, 0], [130, 1], [7, 0]
+        ])
+        y = np.array([0, 0, 0, 0, 1, 1, 1, 1])
+
+        feature_index, split_value = dtc.determine_sample_split(X, y)
+
+        self.assertEqual(feature_index, 0)
+        self.assertEqual(split_value, 5)
+
+    def test_grow_tree(self):
+        dtc = DecisionTreeClassifier(max_depth=2)
+
+        X = np.array([
+            [1, 2], [1, 1], [2, 2], 
+            [1, -1], [2, -1], [1, -2],
+            [-1, 1], [-1, 2], [-2, 1], [-2, 2], 
+            [-1, -1], [-1, -2], [-2, -1], [-2, -2]
+        ])
+        y = np.array([0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0])
+
+        tree = dtc.grow_tree(X[:,1:2], y)
+
+        self.assertIsNotNone(tree)

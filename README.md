@@ -48,6 +48,3 @@ Official repository: https://github.com/rasbt/python-machine-learning-book-2nd-e
 10. Describe Random Forest algorithm. What are the main metaparameters and how how they impact the overfitting or underfitting?
 11. Describe KNN method. Why is it call 'lazy learner'?
 12. Implment KNN.
- 
-6. 
-
