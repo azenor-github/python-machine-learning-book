@@ -219,3 +219,32 @@ class DecisionTreeClassifier:
             return self.predict_class(x, node["right_node"])
 
         return max(node["yhat"].items(), key=lambda x: x[1])[0]
+
+
+class KNeighborsClassifier(object):
+
+    def __init__(self, n_neighbors=3, p=2):
+        self.n_neighbors = n_neighbors
+        self.p = p
+
+    def fit(self, X, y):
+        self.X = X
+        self.y = y
+
+    def predict(self, X):
+        dist = self.calc_distance_matrix(X)
+        return self.make_predictions(dist)
+
+    def calc_distance_matrix(self, X):
+        return np.apply_along_axis(self.calc_distance, axis=1, arr=X).T
+
+    def calc_distance(self, x):
+        return np.sqrt(np.sum((self.X - x)**self.p, axis=1))
+
+    def make_predictions(self, dist):
+        return np.apply_along_axis(self.make_prediction, axis=0, arr=dist)
+
+    def make_prediction(self, disti):
+        dist_order_indexes = np.argsort(disti)
+        y_neighbors = self.y[dist_order_indexes][:self.n_neighbors]
+        return np.argmax(np.bincount(y_neighbors))

@@ -232,3 +232,37 @@ class DecisionTreeClassifierTest(unittest.TestCase):
         tree = dtc.grow_tree(X[:,1:2], y)
 
         self.assertIsNotNone(tree)
+
+
+class KNeighborsClassifierTest(unittest.TestCase):
+
+    def test_predict_class_with_knn(self):
+        knn = KNeighborsClassifier()
+
+        X = np.array([[1, 1], [3, 1], [3, 3], [-1, 1], [-1, 3], [-3, 1]])
+        y = np.array([1, 1, 0, 0, 1, 0])
+
+        knn.fit(X, y)
+
+        X_test = np.array([[2, 2], [-2, 2]])
+        y_test = np.array([1, 0])
+
+        yhat = knn.predict(X_test)
+
+        self.assertTrue(np.array_equal(yhat, y_test))
+
+    def test_calc_euclidean_distance_between_instances(self):
+        knn = KNeighborsClassifier()
+
+        X = np.array([[1, 1], [3, 1], [3, 3], [-1, 1], [-1, 3], [-3, 1]])
+        y = np.array([1, 1, 0, 0, 1, 0])
+
+        knn.fit(X, y)
+
+        X_test = np.array([[2, 2], [-2, 2]])
+        dist = knn.calc_distance_matrix(X_test)
+
+        self.assertTrue(np.array_equal(dist.shape, np.array([6, 2])))
+        self.assertEqual(dist[0, 0], 2**(1/2))
+        self.assertEqual(dist[5, 0], 26**(1/2))
+        self.assertEqual(dist[5, 1], 2**(1/2))
