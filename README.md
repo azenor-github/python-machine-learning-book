@@ -7,7 +7,7 @@ Official repository: https://github.com/rasbt/python-machine-learning-book-2nd-e
 1. - [x] Machine Learning - Giving Computers the Ability to Learn from Data
 2. - [x] Training Machine Learning Algorithms for Classification
 3. - [x] A Tour of Machine Learning Classifiers Using Scikit-Learn
-4. - [ ] Building Good Training Sets – Data Pre-Processing
+4. - [x] Building Good Training Sets – Data Pre-Processing
 5. - [ ] Compressing Data via Dimensionality Reduction
 6. - [ ] Learning Best Practices for Model Evaluation and Hyperparameter Optimization
 7. - [ ] Combining Different Models for Ensemble Learning
@@ -48,3 +48,18 @@ Official repository: https://github.com/rasbt/python-machine-learning-book-2nd-e
 10. Describe Random Forest algorithm. What are the main metaparameters and how how they impact the overfitting or underfitting?
 11. Describe KNN method. Why is it call 'lazy learner'?
 12. Implment KNN.
+
+#### Chapter 04
+
+1. Read 'Intro to Data Structurs' from pandas doc (https://pandas.pydata.org/pandas-docs/stable/dsintro.html).
+2. What are the typical strategies for dealing with missing values?
+3. Read '4.3. Preprocessing data' from scikit-learn doc. (http://scikit-learn.org/stable/modules/preprocessing.html).
+4. What are the typical methods for handling categorical data? What is one-hot encoding?
+5. What are the most common feature scalling methods? Are then any reason to prefer any of them?
+6. What is the purpose of regularization? What are the differences between L1 and L2 regularization methods?
+7. Feature selection vs. feature extraction. Define both terms and explain the differences.
+8. Implement forward feature selection algorithm.
+9. How can one use random forests to assess importance of the features?
+10. Read '1.13. Feature selection' from scikit-learn doc (http://scikit-learn.org/stable/modules/feature_selection.html).
+11. Read 'Working with missing data' from pandas doc (https://pandas.pydata.org/pandas-docs/stable/missing_data.html).
+12. Implment 'Exhaustive feature selection algorithm'. Evalute all possible combinations and choose the best subset.
