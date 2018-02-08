@@ -63,3 +63,11 @@ Official repository: https://github.com/rasbt/python-machine-learning-book-2nd-e
 10. Read '1.13. Feature selection' from scikit-learn doc (http://scikit-learn.org/stable/modules/feature_selection.html).
 11. Read 'Working with missing data' from pandas doc (https://pandas.pydata.org/pandas-docs/stable/missing_data.html).
 12. Implment 'Exhaustive feature selection algorithm'. Evalute all possible combinations and choose the best subset.
+
+### Aditional Resources
+
+#### Chapter 04
+
+1. [4.3. Preprocessing data])(http://scikit-learn.org/stable/modules/preprocessing.html)
+2. [Section - Should I normalize/standardize/rescale](http://www.faqs.org/faqs/ai-faq/neural-nets/part2/section-16.html)
+3. [About Feature Scaling and Normalization](http://sebastianraschka.com/Articles/2014_about_feature_scaling.html)
