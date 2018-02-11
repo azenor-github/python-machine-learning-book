@@ -5,6 +5,37 @@ from sklearn.metrics import accuracy_score
 from sklearn.model_selection import train_test_split
 
 
+class EFS(object):
+
+    def __init__(
+        self, estimator, k_features=float("Inf"), scoring=accuracy_score
+    ):
+        self.k_features = k_features
+        self.estimator = estimator
+        self.scoring = scoring
+        self.indices_ = []      
+
+    def fit(self, X, y):
+        self.subsets_ = [ 
+            self.find_the_best_subset(X, y, k) 
+            for k in self.get_features_range(X)
+        ]
+        return self
+
+    def find_the_best_subset(self, X, y, k):
+        subsets = list(combinations(range(X.shape[1]), k))
+        scores = [ self.calc_score(X, y, indices) for indices in subsets ]
+        return subsets[np.argmax(scores)]
+
+    def calc_score(self, X, y, indices):
+        self.estimator.fit(X[:, indices], y)
+        y_pred = self.estimator.predict(X[:, indices])
+        score = self.scoring(y, y_pred)
+        return score
+
+    def get_features_range(self, X):
+        return range(1, min(X.shape[1], self.k_features)+1)
+
 
 class FFS(object):
 
