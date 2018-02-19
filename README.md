@@ -64,6 +64,13 @@ Official repository: https://github.com/rasbt/python-machine-learning-book-2nd-e
 11. Read 'Working with missing data' from pandas doc (https://pandas.pydata.org/pandas-docs/stable/missing_data.html).
 12. Implment 'Exhaustive feature selection algorithm'. Evalute all possible combinations and choose the best subset.
 
+#### Chapter 05
+
+1. What is PCA?
+2. What are the main steps performed by PCA?
+3. Read about eigenvalues (Linear Algebra and its applications). Why eigenvectors are associate with principal components?
+
+
 ### Aditional Resources
 
 #### Chapter 04
