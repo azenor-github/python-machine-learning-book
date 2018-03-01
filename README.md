@@ -66,15 +66,32 @@ Official repository: https://github.com/rasbt/python-machine-learning-book-2nd-e
 
 #### Chapter 05
 
-1. What is PCA?
-2. What are the main steps performed by PCA?
-3. Read about eigenvalues (Linear Algebra and its applications). Why eigenvectors are associate with principal components?
-
+1. What is the PCA? What are the main steps performed by PCA?
+2. Read about eigenvalues (Linear Algebra and its applications).
+3. What is the LDA? What are the differences between PCA & LDA?
+4. What is the kernel PCA? When one should prefer kPCA over PCA? 
 
 ### Aditional Resources
 
 #### Chapter 04
 
-1. [4.3. Preprocessing data])(http://scikit-learn.org/stable/modules/preprocessing.html)
+1. [4.3. Preprocessing data](http://scikit-learn.org/stable/modules/preprocessing.html)
 2. [Section - Should I normalize/standardize/rescale](http://www.faqs.org/faqs/ai-faq/neural-nets/part2/section-16.html)
 3. [About Feature Scaling and Normalization](http://sebastianraschka.com/Articles/2014_about_feature_scaling.html)
+
+#### Chatper 05
+
+#####  Eigenvectors/Eigenvalues
+
+1. [Understanding Eigenvectors and Eigenvalues Visually](https://alyssaq.github.io/2015/understanding-eigenvectors-and-eigenvalues-visually/)
+2. [Linear Transforms and Eigenvectors](http://www.austinadee.com/wpblog/linear-transforms-and-eigenvectors/)
+
+##### PCA
+
+3. [PCA objective function: what is the connection between maximizing variance and minimizing error?](https://stats.stackexchange.com/questions/32174/pca-objective-function-what-is-the-connection-between-maximizing-variance-and-m/136072#136072)
+4. [What is an intuitive explanation for how PCA turns from a geometric problem (with distances) to a linear algebra problem (with eigenvectors)?](https://stats.stackexchange.com/questions/217995/what-is-an-intuitive-explanation-for-how-pca-turns-from-a-geometric-problem-wit)
+5. [Making sense of principal component analysis, eigenvectors & eigenvalues](https://stats.stackexchange.com/questions/2691/making-sense-of-principal-component-analysis-eigenvectors-eigenvalues/140579#140579)
+
+#### LDA
+
+6. [LECTURE 10: Linear Discriminant Analysis](http://vision.eecs.ucf.edu/courses/cap5415/fall2011/Lecture-14.5-LDA.pdf)
