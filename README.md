@@ -8,7 +8,7 @@ Official repository: https://github.com/rasbt/python-machine-learning-book-2nd-e
 2. - [x] Training Machine Learning Algorithms for Classification
 3. - [x] A Tour of Machine Learning Classifiers Using Scikit-Learn
 4. - [x] Building Good Training Sets – Data Pre-Processing
-5. - [ ] Compressing Data via Dimensionality Reduction
+5. - [x] Compressing Data via Dimensionality Reduction
 6. - [ ] Learning Best Practices for Model Evaluation and Hyperparameter Optimization
 7. - [ ] Combining Different Models for Ensemble Learning
 8. - [ ] Applying Machine Learning to Sentiment Analysis
