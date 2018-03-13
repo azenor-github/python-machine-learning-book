@@ -9,7 +9,7 @@ Official repository: https://github.com/rasbt/python-machine-learning-book-2nd-e
 3. - [x] A Tour of Machine Learning Classifiers Using Scikit-Learn
 4. - [x] Building Good Training Sets – Data Pre-Processing
 5. - [x] Compressing Data via Dimensionality Reduction
-6. - [ ] Learning Best Practices for Model Evaluation and Hyperparameter Optimization
+6. - [x] Learning Best Practices for Model Evaluation and Hyperparameter Optimization
 7. - [ ] Combining Different Models for Ensemble Learning
 8. - [ ] Applying Machine Learning to Sentiment Analysis
 9. - [ ] Embedding a Machine Learning Model into a Web Application
@@ -70,6 +70,20 @@ Official repository: https://github.com/rasbt/python-machine-learning-book-2nd-e
 2. Read about eigenvalues (Linear Algebra and its applications).
 3. What is the LDA? What are the differences between PCA & LDA?
 4. What is the kernel PCA? When one should prefer kPCA over PCA? 
+
+#### Chatper 06
+
+1. What is a sckit-learn Pipeline? What are the basic methods of its interface?
+2. What is the main idea behind holdout method? How do we split original dataset and what is the purpose of each created subset? What is the main disadventage of this method?
+3. How does k-fold cross-validation method work? What is the optimal number of folds?
+4. Read [Model evaluation, model selection, and algorithm selection in machine learning](https://sebastianraschka.com/blog/2016/model-evaluation-selection-part1.html).
+5. What are the learning and validation curves? How do we use them to diagnose the model?
+6. What are the hyperparameters/metaparameters? How do we tune them? Hod do they differ from parameters learned from the training data (e.g. weights of logistic regression)?
+7. Describe nested cross-validation method used for alogrithm selection.
+8. What is a confusion matrix and how is it build?
+9. How one can deal with inbalance sample?
+10. (Titanic Kaggle Chellange) Select the best model for predicting what sort of people were likely to survive titanic catasthrope. You can create new features on the base of existing ones (features engineering).
+
 
 ### Aditional Resources
 
