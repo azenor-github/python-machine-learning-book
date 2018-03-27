@@ -10,7 +10,7 @@ Official repository: https://github.com/rasbt/python-machine-learning-book-2nd-e
 4. - [x] Building Good Training Sets – Data Pre-Processing
 5. - [x] Compressing Data via Dimensionality Reduction
 6. - [x] Learning Best Practices for Model Evaluation and Hyperparameter Optimization
-7. - [ ] Combining Different Models for Ensemble Learning
+7. - [x] Combining Different Models for Ensemble Learning
 8. - [ ] Applying Machine Learning to Sentiment Analysis
 9. - [ ] Embedding a Machine Learning Model into a Web Application
 10. - [ ] Predicting Continuous Target Variables with Regression Analysis
@@ -84,8 +84,23 @@ Official repository: https://github.com/rasbt/python-machine-learning-book-2nd-e
 9. How one can deal with inbalance sample?
 10. (Titanic Kaggle Chellange) Select the best model for predicting what sort of people were likely to survive titanic catasthrope. You can create new features on the base of existing ones (features engineering).
 
+#### Chapter 07.
+
+1. What is the main idea behind ensemble methods? How does they make predictions?
+2. Stacking vs. majority voting? What is the difference?
+3. How do bagging and boosting work? What are the benefits of using them and what problems thay can solve?
+4. Describe AdaBoost method and its learning procedure.
+5. Read [1.11. Ensemble methods](http://scikit-learn.org/stable/modules/ensemble.html).
+6. Learn about gradient boosting including XGBoost. Do some example using wine dataset.
+7. (Titanic Kaggle Chellange) Use ensemble methods to improve accuracy of your predictions.
 
 ### Aditional Resources
+
+[Artificial Intelligence  MIT Course](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-034-artificial-intelligence-fall-2010/lecture-videos/)
+
+#### Chapter 03
+
+1. [Random Forest From Top To Bottom](https://gormanalysis.com/random-forest-from-top-to-bottom/)
 
 #### Chapter 04
 
@@ -106,6 +121,20 @@ Official repository: https://github.com/rasbt/python-machine-learning-book-2nd-e
 4. [What is an intuitive explanation for how PCA turns from a geometric problem (with distances) to a linear algebra problem (with eigenvectors)?](https://stats.stackexchange.com/questions/217995/what-is-an-intuitive-explanation-for-how-pca-turns-from-a-geometric-problem-wit)
 5. [Making sense of principal component analysis, eigenvectors & eigenvalues](https://stats.stackexchange.com/questions/2691/making-sense-of-principal-component-analysis-eigenvectors-eigenvalues/140579#140579)
 
-#### LDA
-
+##### LDA
 6. [LECTURE 10: Linear Discriminant Analysis](http://vision.eecs.ucf.edu/courses/cap5415/fall2011/Lecture-14.5-LDA.pdf)
+
+#### Chapter 07
+
+1. [CatBoost vs. Light GBM vs. XGBoost](https://www.kdnuggets.com/2018/03/catboost-vs-light-gbm-vs-xgboost.html)
+2. [Gradient Boosting from scratch](https://medium.com/mlreview/gradient-boosting-from-scratch-1e317ae4587d)
+3. [A Kaggle Master Explains Gradient Boosting](http://blog.kaggle.com/2017/01/23/a-kaggle-master-explains-gradient-boosting/)
+4. [A Gentle Introduction to the Gradient Boosting Algorithm for Machine Learning](https://machinelearningmastery.com/gentle-introduction-gradient-boosting-algorithm-machine-learning/)
+5. [17. Learning: Boosting](https://www.youtube.com/watch?v=UHBmv7qCey4)
+6. [Trevor Hastie - Gradient Boosting Machine Learning](https://www.youtube.com/watch?v=wPqtzj5VZus)
+7. [Bagging predictors, L.Breiman, Machine learning](https://www.stat.berkeley.edu/~breiman/bagging.pdf)
+8. [The Strength of Weak Learnability, R.E. Schapire, Machine Learning](http://rob.schapire.net/papers/strengthofweak.pdf)
+9. [Gradient Boosted Feature Selection](http://alicezheng.org/papers/gbfs.pdf)
+10. [Introduction to Boosted Trees](https://xgboost.readthedocs.io/en/latest/model.html)
+11. [Complete Guide to Parameter Tuning in Gradient Boosting (GBM) in Python](https://www.analyticsvidhya.com/blog/2016/02/complete-guide-parameter-tuning-gradient-boosting-gbm-python/)
+12. [Complete Guide to Parameter Tuning in XGBoost (with codes in Python)](https://www.analyticsvidhya.com/blog/2016/03/complete-guide-parameter-tuning-xgboost-with-codes-python/)
