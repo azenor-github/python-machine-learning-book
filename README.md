@@ -11,7 +11,7 @@ Official repository: https://github.com/rasbt/python-machine-learning-book-2nd-e
 5. - [x] Compressing Data via Dimensionality Reduction
 6. - [x] Learning Best Practices for Model Evaluation and Hyperparameter Optimization
 7. - [x] Combining Different Models for Ensemble Learning
-8. - [ ] Applying Machine Learning to Sentiment Analysis
+8. - [x] Applying Machine Learning to Sentiment Analysis
 9. - [ ] Embedding a Machine Learning Model into a Web Application
 10. - [ ] Predicting Continuous Target Variables with Regression Analysis
 11. - [ ] Working with Unlabeled Data – Clustering Analysis
@@ -84,7 +84,7 @@ Official repository: https://github.com/rasbt/python-machine-learning-book-2nd-e
 9. How one can deal with inbalance sample?
 10. (Titanic Kaggle Chellange) Select the best model for predicting what sort of people were likely to survive titanic catasthrope. You can create new features on the base of existing ones (features engineering).
 
-#### Chapter 07.
+#### Chapter 07
 
 1. What is the main idea behind ensemble methods? How does they make predictions?
 2. Stacking vs. majority voting? What is the difference?
@@ -93,6 +93,19 @@ Official repository: https://github.com/rasbt/python-machine-learning-book-2nd-e
 5. Read [1.11. Ensemble methods](http://scikit-learn.org/stable/modules/ensemble.html).
 6. Learn about gradient boosting including XGBoost. Do some example using wine dataset.
 7. (Titanic Kaggle Chellange) Use ensemble methods to improve accuracy of your predictions.
+
+#### Chapter 08
+
+1. What is the sentimental analysis?
+2. What is the main idea behind bag-of-words representation?
+3. Calculate tf-idf of a word 'sun' in the first document (p. 259).
+4. What are the typical steps performing during text cleaning?
+5. Read aboug Naive Bayes Classifier.
+6.* Read about word2vec algorithm.
+7. What is the purpose of topic modelling ?
+9. Read "Latent Dirichlet Allocation towords a deeper understanding".
+10. Build logistic regression model for classifying spam SMS (Kaggle).
+
 
 ### Aditional Resources
 
@@ -138,3 +151,12 @@ Official repository: https://github.com/rasbt/python-machine-learning-book-2nd-e
 10. [Introduction to Boosted Trees](https://xgboost.readthedocs.io/en/latest/model.html)
 11. [Complete Guide to Parameter Tuning in Gradient Boosting (GBM) in Python](https://www.analyticsvidhya.com/blog/2016/02/complete-guide-parameter-tuning-gradient-boosting-gbm-python/)
 12. [Complete Guide to Parameter Tuning in XGBoost (with codes in Python)](https://www.analyticsvidhya.com/blog/2016/03/complete-guide-parameter-tuning-xgboost-with-codes-python/)
+
+
+#### Chapter 08
+
+1. [Naive Bayes and Text Classification I Introduction and Theory](https://arxiv.org/pdf/1410.5329v3.pdf)
+2. [Word2vec Tutorial](https://rare-technologies.com/word2vec-tutorial/#word2vec_tutorial)
+3. [Lecture 2 | Word Vector Representations: word2vec](https://www.youtube.com/watch?v=ERibwqs9p38)
+4. [EM algorithm: how it works](https://www.youtube.com/watch?v=REypj2sy_5U)
+5. [Latent Dirichlet Allocation: Towards a Deeper Understanding](http://obphio.us/pdfs/lda_tutorial.pdf)
