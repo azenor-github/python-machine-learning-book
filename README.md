@@ -12,7 +12,7 @@ Official repository: https://github.com/rasbt/python-machine-learning-book-2nd-e
 6. - [x] Learning Best Practices for Model Evaluation and Hyperparameter Optimization
 7. - [x] Combining Different Models for Ensemble Learning
 8. - [x] Applying Machine Learning to Sentiment Analysis
-9. - [ ] Embedding a Machine Learning Model into a Web Application
+9. - [x] Embedding a Machine Learning Model into a Web Application
 10. - [ ] Predicting Continuous Target Variables with Regression Analysis
 11. - [ ] Working with Unlabeled Data – Clustering Analysis
 12. - [ ] Implementing a Multi-layer Artificial Neural Network from Scratch
