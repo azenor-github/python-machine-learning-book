@@ -13,7 +13,7 @@ Official repository: https://github.com/rasbt/python-machine-learning-book-2nd-e
 7. - [x] Combining Different Models for Ensemble Learning
 8. - [x] Applying Machine Learning to Sentiment Analysis
 9. - [x] Embedding a Machine Learning Model into a Web Application
-10. - [ ] Predicting Continuous Target Variables with Regression Analysis
+10. - [x] Predicting Continuous Target Variables with Regression Analysis
 11. - [ ] Working with Unlabeled Data – Clustering Analysis
 12. - [ ] Implementing a Multi-layer Artificial Neural Network from Scratch
 13. - [ ] Parallelizing Neural Network Training with TensorFlow
@@ -106,6 +106,14 @@ Official repository: https://github.com/rasbt/python-machine-learning-book-2nd-e
 9. Read "Latent Dirichlet Allocation towords a deeper understanding".
 10. Build logistic regression model for classifying spam SMS (Kaggle).
 
+#### Chatper 09
+
+1. Read more about RANSAC algorithm.
+2. Use regularized methods (Ridge Regression, LASSO) for predicting housing 
+prices and compare the performance of the models on independed sample.
+3. Create regression model for predicting students' final grade (kaggel dataset).
+4. What is a quantile regression? When one should prefere it over ordinal 
+linear regression?
 
 ### Aditional Resources
 
@@ -160,3 +168,9 @@ Official repository: https://github.com/rasbt/python-machine-learning-book-2nd-e
 3. [Lecture 2 | Word Vector Representations: word2vec](https://www.youtube.com/watch?v=ERibwqs9p38)
 4. [EM algorithm: how it works](https://www.youtube.com/watch?v=REypj2sy_5U)
 5. [Latent Dirichlet Allocation: Towards a Deeper Understanding](http://obphio.us/pdfs/lda_tutorial.pdf)
+
+
+#### Chatper 10
+
+1. [Robust Estimation : RANSAC](http://www.cse.psu.edu/~rtc12/CSE486/lecture15.pdf)
+2. [Random sample consensus - Wikipedia](https://en.wikipedia.org/wiki/Random_sample_consensus)
