@@ -14,7 +14,7 @@ Official repository: https://github.com/rasbt/python-machine-learning-book-2nd-e
 8. - [x] Applying Machine Learning to Sentiment Analysis
 9. - [x] Embedding a Machine Learning Model into a Web Application
 10. - [x] Predicting Continuous Target Variables with Regression Analysis
-11. - [ ] Working with Unlabeled Data – Clustering Analysis
+11. - [x] Working with Unlabeled Data – Clustering Analysis
 12. - [ ] Implementing a Multi-layer Artificial Neural Network from Scratch
 13. - [ ] Parallelizing Neural Network Training with TensorFlow
 14. - [ ] Going Deeper: The Mechanics of TensorFlow
@@ -114,6 +114,18 @@ prices and compare the performance of the models on independed sample.
 3. Create regression model for predicting students' final grade (kaggel dataset).
 4. What is a quantile regression? When one should prefere it over ordinal 
 linear regression?
+
+#### Chapter 10
+
+1. What is a clustering? How does unsupervised learning differ from suppervised learning?
+2. What are the three types of clustering methods? Name one algorithm from each type.
+3. Describe k-means algorithm. What is the main disadventage of k-means?
+4. Hard vs. soft clustering? What are the differences?
+5. How do we assess the quality of clustering? How one can choose the number of clusterings?
+6. What is the main idea behind hierarchical clustering? What is the difference between agglomerative and divisive clustering? Name the most important parameters affecting the creation of clusters.
+7. What is DBSCAN?
+8. Read about spectral clustering. [A Tutorial on Spectral Clustering](https://arxiv.org/pdf/0711.0189.pdf)
+9. Apply clustering methods to group handwritten digits.
 
 ### Aditional Resources
 
