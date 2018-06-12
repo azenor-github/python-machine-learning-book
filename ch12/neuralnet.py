@@ -27,9 +27,11 @@ def linear_derv(z):
 
 
 class MLNN:
-    
+    '''Cost function: sum of squared errors.'''
+
     def __init__(
         self, topology, bias=True, eta=0.01, 
+        epochs=100, minibatch_size=1, shuffle=True,
         act_func=sigmoid, act_func_derv=sigmoid_derv
     ):
         self.topology = topology
@@ -50,6 +52,19 @@ class MLNN:
 
     def predict(self, X):
         return self._feedforward(X)[-1][-1]
+
+    def fit(self, X, y):
+        costs = []
+        for _ in range(self.epochs):
+            indices = np.arange(X.shape[0])
+            if self.shuffle:
+                np.random.shuffle(indices)
+            cost = self._fit_epoch(X[indices,], y[indices,])
+            costs.append(cost)
+        return costs
+
+    def _fit_epoch(self, X, y):
+        pass
 
     def _feedforward(self, X):
         outputs = []

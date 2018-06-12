@@ -15,7 +15,7 @@ Official repository: https://github.com/rasbt/python-machine-learning-book-2nd-e
 9. - [x] Embedding a Machine Learning Model into a Web Application
 10. - [x] Predicting Continuous Target Variables with Regression Analysis
 11. - [x] Working with Unlabeled Data – Clustering Analysis
-12. - [ ] Implementing a Multi-layer Artificial Neural Network from Scratch
+12. - [x] Implementing a Multi-layer Artificial Neural Network from Scratch
 13. - [ ] Parallelizing Neural Network Training with TensorFlow
 14. - [ ] Going Deeper: The Mechanics of TensorFlow
 15. - [ ] Classifying Images with Deep Convolutional Neural Networks
@@ -115,7 +115,7 @@ prices and compare the performance of the models on independed sample.
 4. What is a quantile regression? When one should prefere it over ordinal 
 linear regression?
 
-#### Chapter 10
+#### Chapter 11
 
 1. What is a clustering? How does unsupervised learning differ from suppervised learning?
 2. What are the three types of clustering methods? Name one algorithm from each type.
@@ -126,6 +126,13 @@ linear regression?
 7. What is DBSCAN?
 8. Read about spectral clustering. [A Tutorial on Spectral Clustering](https://arxiv.org/pdf/0711.0189.pdf)
 9. Apply clustering methods to group handwritten digits.
+
+#### Chapter 12
+
+1. Read 'Chapter 4. Artifical Neural Networks' from Machine learning by Tom Mitchell.
+2. Implement multilayer (>3) neural network.
+3. Formulate gradient descent formula for updating weights of hidden units with assumption of sigmoid activation function and sum of squared errors as cost function.
+4. Implement neural network with scipy optimize methods instead of own implementation of gradient descent (hint: you will have to implment folding and unfolding of weights).
 
 ### Aditional Resources
 
