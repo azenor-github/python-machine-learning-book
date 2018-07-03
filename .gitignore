@@ -8,3 +8,4 @@ __pycache__
 temp
 *.sublime-project
 *.csv
+ch13/MNIST_data
